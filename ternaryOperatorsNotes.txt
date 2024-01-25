@@ -1,0 +1,47 @@
+JS Ternary Operator is a shorter & more efficient "if" statement:
+
+	const beverage = age >= 21 ? 'Beer' : 'Juice'
+	if (age >= 21) is true, then 'Beer' is returned/stored into the "beverage" variable.
+	if (age >= 21) is false, then 'Juice' is returned/stored into the "beverage" variable.
+
+	equivalent:
+		if (age >= 21) { beverage = 'Beer' } else { beverage = 'Juice' }
+
+	Ternary Operator is right-associative which means it can be chained in the following way, similar to an if...else if...else if...else chain:
+
+	Multi Line Function (longer but more readable)
+	function example() {
+		return condition1 ? value1
+			: condition2 ? value2
+			: condition3 ? value3
+			: value4;
+	}
+
+	Multi Line Arrow Function (longer but more readable):
+	const example = () => {
+		condition1 ? value1
+		: condition2 ? value2
+		: condition3 ? value3
+		: value4;
+	}
+
+	Single Line Function (shorter but less readable):
+		function example() {
+			return condition1 ? value1 : condition2 ? value2 : condition3 ? value3 : value4;
+		}
+
+	Single Line Arrow Function (shorter but less readable)
+		const example = () => { condition1 ? value1 : condition2 ? value2 : condition3 ? value3 : value4 }
+
+	equivalent:
+		function example() {
+			if (condition1) {
+				return value1
+			} else if (condition2) {
+				return value2;
+			} else if (condition3) {
+				return value3;
+			} else {
+				return value4;
+			}
+		}
